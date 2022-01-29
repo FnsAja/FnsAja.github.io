@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+header {
+    height: 70px;
+}
+
+header a{
+    text-decoration: none;
+    transition: .3s;
+    color: #333;
+}
+
+header a:hover {
+    color: brown;
+}
+
+.Container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.Nama{
+    display: inline-block;
+    padding: 15px 24px;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.Nav {
+    float: right;
+}
+
+.Nav li {
+    padding : 24px;
+    display: inline-block;
+}
+
+.mobile-menu {
+    display: none;
+    float: right;
+    padding: 24px;
+}
+
+.mobile-menu, .mobile-menu label:hover{
+    cursor: pointer;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -200px;
+    width: 200px;
+    background-color: darkblue;
+    opacity: 80%;
+    transition: .3s;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar li {
+    padding: 24px;
+    transition: .3s;
+    transition-property: background-color;
+}
+
+.sidebar li:hover{
+    background-color: brown;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked ~ .sidebar{
+    left: 0;
+}
+
+/* banner */
+
+section {
+    padding: 50px 0;
+}
+
+.banner {
+    background-color: coral;
+    padding: 130px 0;
+}
+
+.banner img {
+    width: 100px;
+    border-radius: 20px;
+    box-shadow: 0px 3px 5px #ddd;
+    margin-bottom: 8px;
+}
+
+.banner h2, .banner p {
+    color: white;
+}
+
+.banner h2 {
+    margin-bottom: 8px;
+}
+
+.banner p {
+    font-size: 18px;
+}
+
+.cursor {
+    display: inline-block;
+	vertical-align: middle;
+	width: 3px;
+	height: 50px;
+	background-color: black;
+	animation: blink .75s step-end infinite;
+}
+
+.Banner-left {
+    padding-left: 24px;
+}
+
+/* about */
+
+.about h3{
+    padding-bottom: 20px;
+    margin: 20px;
+    text-align: center;
+}
+
+.about h3::before{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    height: 1px;
+    background-color: #ddd;
+    left: calc(50% - 60px);
+}
+
+.about h3::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    width: 40px;
+    height: 4px;
+    background-color: brown;
+    left: calc(50% - 20px);
+}
+
+/* agar jika max width kurang dari 768px, mobile show dan nav none */
+@media (max-width: 768px){
+    .mobile-menu {
+        display: block;
+    }
+
+    .Nav {
+        display: none;
+    }
+}
